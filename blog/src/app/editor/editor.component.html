@@ -1,0 +1,29 @@
+<div *ngFor="let e of listEditors">
+  <div>
+  <span>{{e.id}}</span><br>
+  <span>{{e.firstname}}</span><br>
+  <span>{{e.lastname}}</span><br>
+  <span>{{e.email}}</span><br>
+  </div>
+</div>
+
+<h1>Ajout d'un editor</h1>
+
+<form>
+  <div class="form-group">
+    <label>First Name</label>
+    <input type="text" name="First-name" [(ngModel)]="editor.firstname" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Last Name</label>
+    <input type="text" name="last-name" [(ngModel)]="editor.lastname" class="form-control">
+  </div>
+  <div class="form-group">
+    <label>Email</label>
+    <input type="text" name="email" [(ngModel)]="editor.email" class="form-control">
+  </div>
+  <button (click)="save()" class="btn btn-success">
+    {{ buttonval }}
+  </button>
+</form>
+

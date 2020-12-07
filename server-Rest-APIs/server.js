@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
+var cors = require('cors');
 // parse requests of content-type: application/json
 app.use(bodyParser.json());
 
@@ -10,7 +11,13 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(express.json());
-
+app.use(cors({
+    'allowedHeaders': ['sessionId', 'Content-Type'],
+    'exposedHeaders': ['sessionId'],
+    'origin': '*',
+    'methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
+    'preflightContinue': false
+  }));
 // simple route
 app.get("/", (req, res) => {
     res.json({ message: "Welcome to the API application." });
