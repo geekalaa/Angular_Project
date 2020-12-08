@@ -22,6 +22,11 @@ export class EditorService {
   }
   // delete Editor By id
   deleteEditor(id) {
-    return this.http.delete(this.url + id);
+    return this.http.delete(this.url + '/delete/' + id);
+  }
+  // Update Editor
+  updateEditor(e: Editor) {
+    const id = e.id;
+    return this.http.put(this.url + '/update/' + id , e);
   }
 }

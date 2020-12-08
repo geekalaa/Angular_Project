@@ -1,6 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
 
-.welcomediv {
-  position: relative;
+
+button.btn.btn-warning {
+  margin: 12px;
+}
+table.table {
+  min-height: 340px;
+}
+
+h1 {
+  margin: 8px;
+  text-align: center;
+  font-size: larger;
+}
+
+form.ng-untouched.ng-pristine.ng-valid {
+  margin: 19px;
+}
+
+button.btn.btn-success {
+  margin: 4px;
+}
+h2 {
+  text-align: center;
+}
+tr {
+  height: 10px;
 }

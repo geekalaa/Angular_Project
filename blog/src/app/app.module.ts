@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { EditorComponent } from './editor/editor.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
+import { BackendComponent } from './backend/backend.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EditorComponent
+    EditorComponent,
+    BackendComponent
   ],
   imports: [
     BrowserModule,
