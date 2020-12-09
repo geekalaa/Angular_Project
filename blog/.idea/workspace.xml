@@ -21,11 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="e4b5055f-d307-44a5-989f-0cee2ccb01cf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/backend/backend.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/backend/backend.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/editor/editor.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/editor/editor.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/editor/editor.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/editor/editor.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/editor.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/editor.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +49,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../AngularRestAPI" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
@@ -90,7 +91,9 @@
       <workItem from="1607289646567" duration="1223000" />
       <workItem from="1607290899545" duration="164000" />
       <workItem from="1607373375593" duration="6459000" />
-      <workItem from="1607457472590" duration="9174000" />
+      <workItem from="1607457472590" duration="9480000" />
+      <workItem from="1607538796156" duration="2440000" />
+      <workItem from="1607549293099" duration="2499000" />
     </task>
     <servers />
   </component>
@@ -114,5 +117,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1607465414913" />
+    <state x="0" y="0" width="953" height="472" key="dock-window-1" timestamp="1607550645034">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="0" y="0" width="953" height="472" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1607550645034" />
   </component>
 </project>

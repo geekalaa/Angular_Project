@@ -28,3 +28,10 @@ h2 {
 tr {
   height: 10px;
 }
+h1.fronth1 {
+  font-size: xxx-large;
+  margin: auto;
+  margin-bottom: 118px;
+  min-height: 200px;
+  margin-top: 118px;
+}

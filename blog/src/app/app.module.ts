@@ -7,12 +7,20 @@ import { EditorComponent } from './editor/editor.component';
 import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { BackendComponent } from './backend/backend.component';
+import { FronthomeComponent } from './fronthome/fronthome.component';
+import { NavbackComponent } from './navback/navback.component';
+import { NavfrontComponent } from './navfront/navfront.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     EditorComponent,
-    BackendComponent
+    BackendComponent,
+    FronthomeComponent,
+    NavbackComponent,
+    NavfrontComponent
   ],
   imports: [
     BrowserModule,
