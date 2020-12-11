@@ -56,8 +56,6 @@ export class EditorComponent implements OnInit {
     this.service.deleteEditor(id).subscribe(
       () => this.updateList()
     );
-    this.hiddenForm = true;
-
   }
   updateEditor(id){
     this.service.getEditor(id).subscribe(

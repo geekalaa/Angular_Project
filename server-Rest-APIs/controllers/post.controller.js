@@ -14,12 +14,11 @@ exports.create = (req, res) => {
     const Post2 = new Post({
         id: req.body.id,
         title: req.body.title,
-        description: req.body.description,
+        contenu: req.body.contenu,
         idcategorie: req.body.idcategorie,
         nbre_vue: req.body.nbre_vue,
         idediteur: req.body.idediteur,
         image: req.body.image,
-        url: req.body.url,
         date: req.body.date
 
     });

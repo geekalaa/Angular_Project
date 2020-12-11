@@ -1,30 +1,35 @@
+<!-- Component Interpolation -->
 <app-navback></app-navback>
+
 <div class="container">
   <div class="row">
     <div class="col-md-12">
       <h1>Partie Admin</h1><br>
 
-      <h2>Gestion des éditeurs</h2>
+      <h2 [ngStyle]="{'visibility':hiddenForm ? 'inherit' : 'hidden' }">Gestion des éditeurs</h2>
 <div class="row">
+  <!-- Property binding [ ] -->
   <Button class="btn btn-warning" [hidden]="buttonhide" (click)="hiddenForm = false;buttonhide = true;">Ajouter Editor</Button>
 </div>
-
+      <!-- Property binding [ ] -->
 <form #f="ngForm" [hidden]="hiddenForm">
   <h1>Ajouter un editor</h1>
   <div class="form-group">
     <label>First Name</label>
-    <input [class.is-invalid] = "first.invalid && first.touched" type="text" name="First-name"  [(ngModel)]="editor.firstname" class="form-control"
-           #first="ngModel" minlength="2" required/>
+    <!-- Two-way binding [( )] -->
+    <input [class.is-invalid] = "first.invalid && first.touched" type="text" name="First-name"
+           [(ngModel)]="editor.firstname" class="form-control" #first="ngModel" minlength="2" required/>
   </div>
-  <!-- Validator  -->
+  <!-- Validator  --> <!-- *ngIf -->
   <div class="alert alert-danger" *ngIf="first.invalid && first.touched">
     <div *ngIf="first.errors.required">FIRST NAME IS REQUIRED !!!</div>
     <div *ngIf="first.errors.minlength">FIRST NAME MIN LENGTH 2 !!!</div>
   </div>
   <div class="form-group">
     <label>Last Name</label>
-    <input [class.is-invalid] = "last.invalid && last.touched" type="text" name="last-name" [(ngModel)]="editor.lastname" class="form-control"
-           #last="ngModel" minlength="2" required/>
+    <!-- Two-way binding [( )] -->
+    <input [class.is-invalid] = "last.invalid && last.touched" type="text" name="last-name"
+           [(ngModel)]="editor.lastname" class="form-control" #last="ngModel" minlength="2" required/>
   </div>
   <!-- Validator  -->
   <div class="alert alert-danger" *ngIf="last.invalid && last.touched">
@@ -33,8 +38,9 @@
   </div>
   <div class="form-group">
     <label>Email</label>
-    <input [class.is-invalid] = "email.invalid && email.touched" type="text" name="email" [(ngModel)]="editor.email" class="form-control"
-           #email="ngModel"  pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required/>
+    <!-- Two-way binding [( )] -->
+    <input [class.is-invalid] = "email.invalid && email.touched" type="text" name="email"
+           [(ngModel)]="editor.email" class="form-control" #email="ngModel"  pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required/>
   </div>
   <div class="alert alert-danger" *ngIf="email.invalid && email.touched">
     <div *ngIf="email.errors.required">EMAIL IS REQUIRED !!!</div>
@@ -55,10 +61,13 @@
         </tr>
         </thead>
         <tbody>
-        <tr *ngFor="let e of listEditors">
+        <!-- *ngFor -->
+        <tr *ngFor="let e of listEditors" >
+          <!-- String Interpolation {{ }}-->
           <td>{{e.firstname}}</td>
           <td>{{e.lastname}}</td>
           <td>{{e.email}}</td>
+          <!-- Event binding ( ) -->
           <td><button class="btn btn-dark" (click)="deleteEditor(e.id)">Supprimer</button></td>
           <td><button class="btn btn-dark" (click)="updateEditor(e.id)">Modifier</button></td>
         </tr>

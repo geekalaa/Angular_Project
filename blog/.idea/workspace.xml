@@ -20,14 +20,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e4b5055f-d307-44a5-989f-0cee2ccb01cf" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/model/post.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/__ngcc_entry_points__.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/__ngcc_entry_points__.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/backend/backend.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/backend/backend.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/editor/editor.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/editor/editor.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/editor/editor.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/editor/editor.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/navback/navback.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/navback/navback.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-Rest-APIs/controllers/post.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/../server-Rest-APIs/controllers/post.controller.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-Rest-APIs/models/post.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/../server-Rest-APIs/models/post.model.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-Rest-APIs/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../server-Rest-APIs/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-Rest-APIs/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../server-Rest-APIs/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-Rest-APIs/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../server-Rest-APIs/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,7 +101,7 @@
       <workItem from="1607373375593" duration="6459000" />
       <workItem from="1607457472590" duration="9480000" />
       <workItem from="1607538796156" duration="2440000" />
-      <workItem from="1607549293099" duration="2499000" />
+      <workItem from="1607549293099" duration="29428000" />
     </task>
     <servers />
   </component>
@@ -113,13 +121,25 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="445" y="166" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607624118262">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="445" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1607624118262" />
     <state x="463" y="119" key="FileChooserDialogImpl" timestamp="1607465414913">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="119" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1607465414913" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1607646432628">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1607646432628" />
     <state x="0" y="0" width="953" height="472" key="dock-window-1" timestamp="1607550645034">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="0" y="0" width="953" height="472" key="dock-window-1/0.0.1366.728@0.0.1366.728" timestamp="1607550645034" />
+    <state x="339" y="162" key="run.anything.popup" timestamp="1607619810564">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="339" y="162" key="run.anything.popup/0.0.1366.728@0.0.1366.728" timestamp="1607619810564" />
   </component>
 </project>

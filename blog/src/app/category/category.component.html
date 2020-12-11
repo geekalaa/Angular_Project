@@ -1,0 +1,52 @@
+<!-- Component Interpolation -->
+<app-navback></app-navback>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Partie Admin</h1><br>
+
+      <h2 [ngStyle]="{'visibility':hiddenForm ? 'inherit' : 'hidden' }">Gestion des catégories</h2>
+      <div class="row">
+        <!-- Property binding [ ] -->
+        <Button class="btn btn-warning" [hidden]="buttonhide" (click)="hiddenForm = false;buttonhide = true;">Ajouter une Catégorie</Button>
+      </div>
+      <!-- Property binding [ ] -->
+      <form [formGroup]="addForm" (ngSubmit)="onSubmit()" [hidden]="hiddenForm">
+        <h1>Ajouter une catégorie</h1>
+        <div class="form-group">
+          <label>Name</label>
+          <input type="text" formControlName="name" name="name" class="form-control"/>
+        </div>
+        <!-- Validator  --> <!-- *ngIf -->
+
+          <div class="alert alert-danger" *ngIf="addForm.controls['name'].hasError('required') && addForm.controls['name']?.touched">NAME IS REQUIRED !!!</div>
+          <div class="alert alert-danger" *ngIf="addForm.controls['name'].hasError('minlength') && addForm.controls['name']?.touched">NAME MIN LENGTH 3 !!!</div>
+
+        <button type="submit" class="btn btn-success" [disabled]="addForm.invalid">{{ buttonval }}</button>
+        <button (click)="hiddenForm = true;buttonhide = false;reset()" class="btn btn-danger">Annuler</button>
+      </form>
+      <hr>
+      <table class="table">
+        <thead class="thead-dark">
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+        </thead>
+        <tbody>
+        <!-- *ngFor -->
+        <tr *ngFor="let c of listCategory" >
+          <!-- String Interpolation {{ }}-->
+          <td>{{c.name}}</td>
+          <!-- Event binding ( ) -->
+          <td><button class="btn btn-dark" (click)="deleteCategory(c.id)">Supprimer</button></td>
+          <td><button class="btn btn-dark" (click)="updateCategory(c.id)">Modifier</button></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

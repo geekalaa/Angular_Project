@@ -1,0 +1,112 @@
+<!-- Component Interpolation -->
+<app-navback></app-navback>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Partie Admin</h1><br>
+
+      <h2 [ngStyle]="{'visibility':hiddenForm ? 'inherit' : 'hidden' }">Gestion des Articles</h2>
+      <div class="row">
+        <!-- Property binding [ ] -->
+        <Button class="btn btn-warning" [hidden]="buttonhide" (click)="hiddenForm = false;buttonhide = true;">Ajouter un article</Button>
+      </div>
+      <!-- Property binding [ ] -->
+      <form #f="ngForm" [hidden]="hiddenForm">
+        <h1>Ajouter un article</h1>
+        <div class="form-group">
+          <label>Title</label>
+          <!-- Two-way binding [( )] -->
+          <input [class.is-invalid] = "title.invalid && title.touched" type="text" name="title"
+                 [(ngModel)]="post.title" class="form-control" #title="ngModel" minlength="9" required/>
+        </div>
+        <!-- Validator  --> <!-- *ngIf -->
+        <div class="alert alert-danger" *ngIf="title.invalid && title.touched">
+          <div *ngIf="title.errors.required">Title IS REQUIRED !!!</div>
+          <div *ngIf="title.errors.minlength">Title MIN LENGTH 9 !!!</div>
+        </div>
+        <div class="form-group">
+          <label>contenu</label>
+          <!-- Two-way binding [( )] -->
+          <textarea [class.is-invalid] = "contenu.invalid && contenu.touched" type="text" name="contenu"
+                    [(ngModel)]="post.contenu" class="form-control" #contenu="ngModel" minlength="50" required></textarea>
+        </div>
+        <!-- Validator  -->
+        <div class="alert alert-danger" *ngIf="contenu.invalid && contenu.touched">
+          <div *ngIf="contenu.errors.required">Contenu IS REQUIRED !!!</div>
+          <div *ngIf="contenu.errors.minlength">Contenu MIN LENGTH 50 !!!</div>
+        </div>
+        <div class="form-group">
+          <label>Categorie</label>
+          <select #cat="ngModel"  [(ngModel)]="post.idcategorie"  class="form-control"  name="selectedcat"  required>
+            <option *ngFor="let cat of listCat" [value]="cat.id">{{cat.name}}</option>
+          </select>
+        </div>
+        <div class="alert alert-danger" *ngIf="post.idcategorie === undefined && cat.touched">
+          <div>CATEGORY IS REQUIRED !!!</div>
+        </div>
+        <div class="form-group">
+          <label>Editeur</label>
+          <select #edi="ngModel"  [(ngModel)]="post.idediteur" class="form-control"  name="selectededi"  required>
+            <option *ngFor="let edit of listEdi" [value]="edit.id">{{edit.firstname}}</option>
+          </select>
+        </div>
+        <div class="alert alert-danger" *ngIf="post.idediteur === undefined && edi.touched">
+          <div>EDITOR IS REQUIRED !!!</div>
+        </div>
+
+
+        <div class="form-group">
+          <label>Image</label>
+          <input type="file" [(ngModel)]="post.image" name="image" ng2FileSelect [uploader]="uploader"  accept="image/x-png,image/gif,image/jpeg" class="form-control" />
+
+        </div>
+        <!-- Validator  --> <!-- *ngIf -->
+        <div class="alert alert-danger" *ngIf="title.invalid && title.touched">
+          <div *ngIf="title.errors.required">Title IS REQUIRED !!!</div>
+          <div *ngIf="title.errors.minlength">Title MIN LENGTH 2 !!!</div>
+        </div>
+
+        <button (click)="save(f)" class="btn btn-success" [disabled]="f.invalid">{{ buttonval }}</button>
+        <button (click)="hiddenForm = true;buttonhide = false;f.resetForm()" class="btn btn-danger">Annuler</button>
+      </form>
+      <hr>
+      <table class="table">
+        <thead class="thead-dark">
+        <tr>
+          <th scope="col">title</th>
+          <th scope="col">categorie</th>
+          <th scope="col">vues</th>
+          <th scope="col">editeur</th>
+          <th scope="col">date</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <!-- *ngFor -->
+        <tr *ngFor="let p of listPost" >
+          <!-- String Interpolation {{ }}-->
+          <td>{{ p.title }}</td>
+          <td>{{ getCat(p.idcategorie) }}</td>
+          <td>{{ p.nbre_vue }}</td>
+          <td>{{ getEdi(p.idediteur) }}</td>
+          <td>{{ transformDate(p.date) }}</td>
+          <!-- Event binding ( ) -->
+          <td><button class="btn btn-dark" (click)="deletePost(p.id)">Supprimer</button></td>
+          <td><button class="btn btn-dark" (click)="updatePost(p.id)">Modifier</button></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+

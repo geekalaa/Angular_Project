@@ -5,12 +5,11 @@ var date = new Date();
 const Post = function (Post) {
     this.id = Post.id;
     this.title = Post.title;
-    this.description = Post.description;
+    this.contenu = Post.contenu;
     this.idcategorie = Post.idcategorie;
     this.nbre_vue = Post.nbre_vue;
     this.idediteur = Post.idediteur;
     this.image = Post.image;
-    this.url = Post.url;
     this.date = date;
 };
 
@@ -61,14 +60,13 @@ Post.getAll = result => {
 
 Post.updateById = (id, PostIN, result) => {
     sql.query(
-        "UPDATE posts SET title = ?,description = ?,idcategorie = ?,nbre_vue = ?,idediteur = ?,image = ?,url = ? WHERE id = ?",
+        "UPDATE posts SET title = ?,contenu = ?,idcategorie = ?,nbre_vue = ?,idediteur = ?,image = ? WHERE id = ?",
         [PostIN.title,
-            PostIN.description,
+            PostIN.contenu,
             PostIN.idcategorie,
             PostIN.nbre_vue,
             PostIN.idediteur,
-            PostIN.image,
-            PostIN.url, id],
+            PostIN.image, id],
         (err, res) => {
             if (err) {
                 console.log("error: ", err);
