@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand"[routerLink]="['/']">
     <h2>Blog</h2>
   </a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -8,16 +8,10 @@
   <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
     <ul  class="navbar-nav">
       <li class="nav-item ">
-        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link"[routerLink]="['/']">Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Category</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Editors</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Articles</a>
+        <a class="nav-link" [routerLink]="['/admin']">Back End</a>
       </li>
     </ul>
   </div>

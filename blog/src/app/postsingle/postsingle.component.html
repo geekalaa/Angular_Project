@@ -1,0 +1,42 @@
+<app-navfront></app-navfront>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="mt-4" style=" font-size: 32px; ">{{post.title}}</h1>
+      <p>Vues : {{post.nbre_vue}}</p>
+      <p class="lead">
+        by :
+        <a>{{ edit.firstname }} {{ edit.lastname }} </a>
+      </p>
+      <p class="lead">
+        <a>Category : {{ category.name }} </a>
+      </p>
+      <hr>
+      <p>Posted on {{transformDate(post.date)}}</p>
+
+      <hr>
+
+      <!-- Preview Image -->
+      <img class="img-fluid rounded" src="http://localhost:3000/{{ post.image }}"  style=" width: 100%; " alt="{{post.title}}">
+
+      <hr>
+
+
+
+      <p>{{ post.contenu }}</p>
+
+
+
+      <hr>
+
+
+
+
+
+    </div>
+
+
+  </div>
+
+
+</div>

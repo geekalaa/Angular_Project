@@ -35,3 +35,29 @@ h1.fronth1 {
   min-height: 200px;
   margin-top: 118px;
 }
+p.card-text {
+  height: 109px;
+  margin-bottom: 15px;
+}
+
+.card-body {
+  padding: 16px;
+  padding-bottom: 1px;
+  height: 232px;
+}
+img.card-img-top {
+  max-height: 300px;
+  min-height: 250px;
+}
+.card-deck {
+  display: inherit;
+}
+.container {
+  width: 90% !important;
+  max-width: 90%;
+}
+.card {
+  float: left;
+  width: 29.333%;
+  margin: 33px;
+}

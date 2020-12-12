@@ -30,6 +30,7 @@ export class PostComponent implements OnInit {
   buttonval: string;
   hiddenForm: boolean;
   buttonhide: boolean;
+  previous_image: string;
   // tslint:disable-next-line:max-line-length
   constructor(public datepipe: DatePipe, private service: PostService, private categoryservice: CategoryService, private editorservice: EditorService) {
 
@@ -41,6 +42,7 @@ export class PostComponent implements OnInit {
   ngOnInit(): void {
     this.uploader.onAfterAddingFile = (file) => {
       file.withCredentials = false;
+      this.post.image = file._file.name;
       this.uploader.uploadAll();
     };
     this.uploader.onCompleteItem = (item: any, status: any) => {
@@ -58,8 +60,7 @@ export class PostComponent implements OnInit {
   }
   save(form: NgForm) {
     if (this.buttonval === 'Ajouter'){
-      console.log(this.post);
-      // this.post.image.replace('C:\fakepath', '');
+      // console.log(this.post);
       this.post.id = null;
       this.post.date = new Date();
       this.post.nbre_vue = 0;
@@ -73,6 +74,10 @@ export class PostComponent implements OnInit {
       // reset form
       form.resetForm();
     }else if (this.buttonval === 'Modifier'){
+      console.log(this.post);
+      if (this.post.image == null){
+        this.post.image = this.previous_image;
+      }
       this.service.updatePost(this.post).subscribe(
         () => this.updateList()
       );
@@ -93,8 +98,14 @@ export class PostComponent implements OnInit {
   updatePost(id){
     this.service.getPost(id).subscribe(
       (data: Post) => {
-        this.post = data;
-        this.post.image = ' ';
+        this.post.id = data.id;
+        this.post.title = data.title;
+        this.post.contenu = data.contenu;
+        this.post.idediteur = data.idediteur;
+        this.post.date = data.date;
+        this.post.idcategorie = data.idcategorie;
+        this.post.nbre_vue = data.nbre_vue;
+        this.previous_image = data.image;
       });
     this.buttonval = 'Modifier';
     this.hiddenForm = false;

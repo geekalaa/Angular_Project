@@ -46,7 +46,7 @@ Post.findById = (PostId, result) => {
 };
 
 Post.getAll = result => {
-    sql.query("SELECT * FROM posts", (err, res) => {
+    sql.query("SELECT * FROM posts ORDER BY id DESC", (err, res) => {
         if (err) {
             console.log("error: ", err);
             result(null, err);

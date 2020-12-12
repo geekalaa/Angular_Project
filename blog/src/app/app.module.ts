@@ -13,6 +13,8 @@ import { CategoryComponent } from './category/category.component';
 import { PostComponent } from './post/post.component';
 import {DatePipe} from '@angular/common';
 import {FileSelectDirective, FileUploadModule} from 'ng2-file-upload';
+import { PostsingleComponent } from './postsingle/postsingle.component';
+import { Notfound404Component } from './notfound404/notfound404.component';
 
 
 @NgModule({
@@ -25,6 +27,8 @@ import {FileSelectDirective, FileUploadModule} from 'ng2-file-upload';
     NavfrontComponent,
     CategoryComponent,
     PostComponent,
+    PostsingleComponent,
+    Notfound404Component,
   ],
   imports: [
     BrowserModule,

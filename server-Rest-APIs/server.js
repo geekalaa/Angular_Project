@@ -62,6 +62,7 @@ app.post('/upload', upload.single('image'), function (req, res) {
     }
   });
 
+  app.use(express.static(__dirname + '/uploads'));
 
 // set port, listen for requests
 app.listen(3000, () => {
