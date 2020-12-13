@@ -14,11 +14,17 @@ import {Category} from '../model/category';
 })
 export class FronthomeComponent implements OnInit {
   listPost: Post[];
+  listsearch: Post[];
   post: Post;
   listEdi: Editor[];
   edit: Editor;
   listCat: Category[];
   category: Category;
+  termetosearch: string;
+  catidsearch: number;
+  ediidsearch: number;
+  default: boolean;
+  serach: boolean;
   // tslint:disable-next-line:max-line-length
   constructor(public datepipe: DatePipe, private service: PostService, private categoryservice: CategoryService, private editorservice: EditorService) { }
 
@@ -29,21 +35,40 @@ export class FronthomeComponent implements OnInit {
     this.edit = new Editor();
     this.category = new Category();
     this.post = new Post();
+    this.default = false;
+    this.serach = true;
+    this.catidsearch = null;
+    this.ediidsearch = null;
   }
   getCat(id){
-    this.category = this.listCat.find(e => e.id === id);
-    if (this.category !== undefined) {
-      return this.category.name;
+    if (this.listCat !== undefined) {
+      this.category = this.listCat.find(e => e.id === id);
+      if (this.category !== undefined) {
+        return this.category.name;
+      }
     }
   }
   getEdi(id){
-    this.edit = this.listEdi.find(e => e.id === id);
-    if (this.edit !== undefined) {
-      return this.edit.firstname;
+    if (this.listEdi !== undefined) {
+      this.edit = this.listEdi.find(e => e.id === id);
+      if (this.edit !== undefined) {
+        return this.edit.firstname;
+      }
     }
   }
   transformDate(date: Date){
     return this.datepipe.transform(date, 'yyyy/MM/dd').toString();
   }
-
+  searchPost(){
+    this.default = true;
+    this.serach = false;
+    this.listsearch = this.service.search(this.listPost, this.termetosearch, this.catidsearch, this.ediidsearch);
+  }
+  reset(){
+    this.default = false;
+    this.serach = true;
+    this.termetosearch = null;
+    this.catidsearch = null;
+    this.ediidsearch = null;
+  }
 }

@@ -1,10 +1,42 @@
 <app-navfront></app-navfront>
 <div class="container" style="margin-bottom: 61px;">
-  <div class="row">
+  <div class="row search">
+    <input id="search" [class.is-invalid] = "search.invalid && search.touched" type="text" name="First-name"
+          placeholder="Search" [(ngModel)]="termetosearch" #search="ngModel" minlength="2" required >
+    <select id="cat"  [(ngModel)]="catidsearch"   name="selectedcat">
+      <option >Select Category </option>
+      <option *ngFor="let cat of listCat" [value]="cat.id">{{cat.name}}</option>
+    </select>
+    <select id="edi"  [(ngModel)]="ediidsearch" name="selectededi">
+      <option >Select Editor </option>
+      <option *ngFor="let edi of listEdi" [value]="edi.id">{{edi.firstname}}</option>
+    </select>
+    <button (click)="searchPost()" id="searchbutt" class="btn btn-success" [disabled]="search.invalid">Search</button>
+    <button (click)="reset()" id="reset" class="btn btn-danger" [disabled]="search.invalid">Reset</button>
+  </div>
+  <div [hidden]="default" class="row">
     <div class="col-md-12">
       <h1 style=" font-size: 37px; ">Partie Front</h1><br>
+
       <div class="card-deck">
         <div *ngFor="let post of listPost" class="card">
+          <img class="card-img-top" src="http://localhost:3000/{{ post.image }}" alt="{{post.title}}">
+          <div class="card-body">
+            <h5 class="card-title" style=" font-size: 19px; ">{{post.title}}</h5>
+            <p class="card-text">{{ post.contenu.slice(0,100) }}</p>
+            <button [routerLink]="['post',post.id]" type="button" class="btn btn-outline-dark postbutton">Visiter</button>
+            <span style=" float: right; padding: 6px; border: 1px #6f6f6f solid; border-radius: 11px; ">{{getEdi(post.idediteur)}}-({{ getCat(post.idcategorie) }})-{{transformDate(post.date)}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div [hidden]="serach" class="row">
+    <div class="col-md-12">
+      <h1 style=" font-size: 37px; ">Partie Front</h1><br>
+
+      <div class="card-deck">
+        <div *ngFor="let post of listsearch" class="card">
           <img class="card-img-top" src="http://localhost:3000/{{ post.image }}" alt="{{post.title}}">
           <div class="card-body">
             <h5 class="card-title" style=" font-size: 19px; ">{{post.title}}</h5>

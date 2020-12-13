@@ -30,4 +30,23 @@ export class PostService {
     const id = p.id;
     return this.http.put(this.url + '/update/' + id , p);
   }
+  // Update Post Vues
+  updatePostVues(id: number, vues: number) {
+    return this.http.get(this.url + '/update/' + id + '/' + vues);
+  }
+  // search in POSTS
+  search(list: any, title: string, crit: any, crit1: any){
+    if (title.length >= 2){
+      if (crit !== null && crit1 === null){
+        return list.filter(e => e.idcategorie == crit && e.title.indexOf(title) !== -1);
+      }
+      else if (crit === null && crit1 !== null){
+        return list.filter(e => e.idediteur == crit1 && e.title.indexOf(title) !== -1);
+      }else if (crit !== null && crit1 !== null){
+        return list.filter(e => e.idediteur == crit1 && e.idcategorie == crit && e.title.indexOf(title) !== -1);
+      }else{
+        return list.filter(e => e.title.indexOf(title) !== -1);
+      }
+    }
+  }
 }

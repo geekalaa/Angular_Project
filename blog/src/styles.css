@@ -61,3 +61,25 @@ img.card-img-top {
   width: 29.333%;
   margin: 33px;
 }
+.row.search {
+  margin: 25px;
+  justify-content: center;
+}
+input#search {
+  float: left;
+}
+select#cat {
+  float: left;
+  margin-left: 5px;
+}
+button#searchbutt {
+  margin: 0;
+  margin-left: 12px;
+}
+
+select#edi {
+  margin-left: 5px;
+}
+button#reset {
+  margin-left: 10px;
+}

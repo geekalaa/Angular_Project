@@ -21,17 +21,16 @@
   <component name="ChangeListManager">
     <list default="true" id="e4b5055f-d307-44a5-989f-0cee2ccb01cf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/fronthome/fronthome.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/fronthome/fronthome.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/fronthome/fronthome.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/fronthome/fronthome.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/navback/navback.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/navback/navback.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/navfront/navfront.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/navfront/navfront.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/post/post.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/post/post.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/post/post.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/post/post.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/postsingle/postsingle.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/postsingle/postsingle.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/postsingle/postsingle.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/postsingle/postsingle.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/shared/post.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/post.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../server-Rest-APIs/controllers/post.controller.js" beforeDir="false" afterPath="$PROJECT_DIR$/../server-Rest-APIs/controllers/post.controller.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../server-Rest-APIs/models/post.model.js" beforeDir="false" afterPath="$PROJECT_DIR$/../server-Rest-APIs/models/post.model.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../server-Rest-APIs/server.js" beforeDir="false" afterPath="$PROJECT_DIR$/../server-Rest-APIs/server.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,7 +96,7 @@
       <workItem from="1607373375593" duration="6459000" />
       <workItem from="1607457472590" duration="9480000" />
       <workItem from="1607538796156" duration="2440000" />
-      <workItem from="1607549293099" duration="41032000" />
+      <workItem from="1607549293099" duration="55301000" />
     </task>
     <servers />
   </component>

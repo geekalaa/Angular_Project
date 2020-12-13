@@ -91,6 +91,33 @@ exports.update = (req, res) => {
     );
 };
 
+// Update a Post identified by the postId in the request
+exports.updatevue = (req, res) => {
+    // Validate Request
+    if (!req.body) {
+        res.status(400).send({
+            message: "Content can not be empty!"
+        });
+    }
+
+    Post.updateByIdvue(
+        req.params.postId,req.params.vues,
+        (err, data) => {
+            if (err) {
+                if (err.kind === "not_found") {
+                    res.status(404).send({
+                        message: `Not found Post with id ${req.params.postId}.`
+                    });
+                } else {
+                    res.status(500).send({
+                        message: "Error updating Post with id " + req.params.postId
+                    });
+                }
+            } else res.send(data);
+        }
+    );
+};
+
 // Delete a Post with the specified PostId in the request
 exports.delete = (req, res) => {
     Post.remove(req.params.postId, (err, data) => {

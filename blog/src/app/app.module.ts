@@ -15,6 +15,8 @@ import {DatePipe} from '@angular/common';
 import {FileSelectDirective, FileUploadModule} from 'ng2-file-upload';
 import { PostsingleComponent } from './postsingle/postsingle.component';
 import { Notfound404Component } from './notfound404/notfound404.component';
+import { VuesComponent } from './vues/vues.component';
+
 
 
 @NgModule({
@@ -29,6 +31,7 @@ import { Notfound404Component } from './notfound404/notfound404.component';
     PostComponent,
     PostsingleComponent,
     Notfound404Component,
+    VuesComponent,
   ],
   imports: [
     BrowserModule,

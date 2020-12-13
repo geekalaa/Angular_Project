@@ -85,6 +85,28 @@ Post.updateById = (id, PostIN, result) => {
         }
     );
 };
+Post.updateByIdvue = (id, vues, result) => {
+    sql.query(
+        "UPDATE posts SET nbre_vue = ? WHERE id = ?",
+        [vues, id],
+        (err, res) => {
+            if (err) {
+                console.log("error: ", err);
+                result(null, err);
+                return;
+            }
+
+            if (res.affectedRows == 0) {
+                // not found Post with the id
+                result({ kind: "not_found" }, null);
+                return;
+            }
+
+            console.log("updated Post: ");
+            result(null);
+        }
+    );
+};
 
 Post.remove = (id, result) => {
     sql.query("DELETE FROM posts WHERE id = ?", id, (err, res) => {

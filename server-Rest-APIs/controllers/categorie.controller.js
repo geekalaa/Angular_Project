@@ -84,6 +84,8 @@ exports.update = (req, res) => {
     );
 };
 
+
+
 // Delete a Category with the specified categoryId in the request
 exports.delete = (req, res) => {
     Category.remove(req.params.categoryId, (err, data) => {

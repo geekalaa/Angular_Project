@@ -63,7 +63,7 @@ export class PostComponent implements OnInit {
       // console.log(this.post);
       this.post.id = null;
       this.post.date = new Date();
-      this.post.nbre_vue = 0;
+      this.post.nbre_vue = 1;
       this.service.addPost(this.post).subscribe(
         () => this.updateList()
       );
@@ -125,5 +125,6 @@ export class PostComponent implements OnInit {
   transformDate(date: Date){
     return this.datepipe.transform(date, 'yyyy/MM/dd').toString();
   }
+
 
 }

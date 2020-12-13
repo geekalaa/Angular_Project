@@ -53,6 +53,8 @@ module.exports = app => {
 
   // Update a Post with postId
   app.put("/post/update/:postId", Post.update);
+   // Update a Post with postId Vues
+   app.get("/post/update/:postId/:vues", Post.updatevue);
 
   // Delete a Post with postId
   app.delete("/post/delete/:postId", Post.delete);
