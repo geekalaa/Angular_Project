@@ -8,6 +8,7 @@ import {Post} from '../model/post';
 import {Editor} from '../model/editor';
 import {Category} from '../model/category';
 
+
 @Component({
   selector: 'app-postsingle',
   templateUrl: './postsingle.component.html',

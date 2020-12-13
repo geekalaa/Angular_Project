@@ -30,6 +30,7 @@ export class PostComponent implements OnInit {
   buttonval: string;
   hiddenForm: boolean;
   buttonhide: boolean;
+  // tslint:disable-next-line:variable-name
   previous_image: string;
   // tslint:disable-next-line:max-line-length
   constructor(public datepipe: DatePipe, private service: PostService, private categoryservice: CategoryService, private editorservice: EditorService) {

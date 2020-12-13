@@ -1,8 +1,8 @@
 <app-navfront></app-navfront>
 <div class="container" style="margin-bottom: 61px;">
   <div class="row search">
-    <input id="search" [class.is-invalid] = "search.invalid && search.touched" type="text" name="First-name"
-          placeholder="Search" [(ngModel)]="termetosearch" #search="ngModel" minlength="2" required >
+    <input #search="ngModel" id="search" [class.is-invalid] = "search.invalid && search.touched" type="text" name="search"
+          placeholder="Search" [(ngModel)]="termetosearch"  minlength="2" required/>
     <select id="cat"  [(ngModel)]="catidsearch"   name="selectedcat">
       <option >Select Category </option>
       <option *ngFor="let cat of listCat" [value]="cat.id">{{cat.name}}</option>
@@ -12,7 +12,10 @@
       <option *ngFor="let edi of listEdi" [value]="edi.id">{{edi.firstname}}</option>
     </select>
     <button (click)="searchPost()" id="searchbutt" class="btn btn-success" [disabled]="search.invalid">Search</button>
-    <button (click)="reset()" id="reset" class="btn btn-danger" [disabled]="search.invalid">Reset</button>
+    <button (click)="reset(search)" id="reset" class="btn btn-danger" [disabled]="search.invalid">Reset</button>
+
+      <div class="alert alert-danger costum" *ngIf="search.invalid && search.touched && search.errors.minlength">MIN LENGTH IS 2 !!!</div>
+
   </div>
   <div [hidden]="default" class="row">
     <div class="col-md-12">

@@ -6,6 +6,7 @@ import {EditorService} from '../shared/editor.service';
 import {Post} from '../model/post';
 import {Editor} from '../model/editor';
 import {Category} from '../model/category';
+import {NgForm, NgModel} from '@angular/forms';
 
 @Component({
   selector: 'app-fronthome',
@@ -64,11 +65,13 @@ export class FronthomeComponent implements OnInit {
     this.serach = false;
     this.listsearch = this.service.search(this.listPost, this.termetosearch, this.catidsearch, this.ediidsearch);
   }
-  reset(){
+
+  reset(form: NgModel){
     this.default = false;
     this.serach = true;
     this.termetosearch = null;
     this.catidsearch = null;
     this.ediidsearch = null;
+    form.reset();
   }
 }

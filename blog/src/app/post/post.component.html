@@ -61,11 +61,6 @@
           <input type="file"  name="image" ng2FileSelect [uploader]="uploader"  accept="image/x-png,image/gif,image/jpeg" class="form-control" />
 
         </div>
-        <!-- Validator  --> <!-- *ngIf -->
-        <div class="alert alert-danger" *ngIf="title.invalid && title.touched">
-          <div *ngIf="title.errors.required">Title IS REQUIRED !!!</div>
-          <div *ngIf="title.errors.minlength">Title MIN LENGTH 2 !!!</div>
-        </div>
 
         <button (click)="save(f)" class="btn btn-success" [disabled]="f.invalid">{{ buttonval }}</button>
         <button (click)="hiddenForm = true;buttonhide = false;f.resetForm()" class="btn btn-danger">Annuler</button>

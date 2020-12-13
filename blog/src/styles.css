@@ -46,7 +46,7 @@ p.card-text {
   height: 232px;
 }
 img.card-img-top {
-  max-height: 300px;
+  max-height: 250px;
   min-height: 250px;
 }
 .card-deck {
@@ -82,4 +82,12 @@ select#edi {
 }
 button#reset {
   margin-left: 10px;
+}
+.alert.alert-danger.costum {
+  margin: 0px;
+  margin-left: 11px;
+  padding: 1px;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 22px;
 }
